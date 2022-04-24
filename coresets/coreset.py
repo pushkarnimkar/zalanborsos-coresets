@@ -36,6 +36,9 @@ class Coreset(object):
         """
         pass
 
+    def coreset_indices(self, size):
+        return np.random.choice(self.n_samples, size=size, p=self.p)
+
     def generate_coreset(self, size):
         """
         Generates a coreset of the data set.
